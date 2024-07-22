@@ -77,10 +77,16 @@ elif task == "from_k":
                 break
 
 elif task == "string_iter":
-    ...
+    n = input()
+    prev_dig = 1
+    for i in n:
+        print(prev_dig * int(i))
+        prev_dig = int(i)
+
 
 elif task == "list_iter":
     lst = eval(input())  # this will load the list from input
-
+    for i in lst:
+        print(f"{i} - type: {type(i)}")
 else:
     print("Invalid")
